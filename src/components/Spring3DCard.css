@@ -1,0 +1,23 @@
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 70vw;
+  height: 70vw;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.5);
+  background-color: grey;
+  background-image: url(https://gw.alicdn.com/tfs/TB16NZfvhTpK1RjSZFMXXbG_VXa-600-800.png);
+  background-size: cover;
+  background-position: center;
+  border: 15px solid #efefef;
+  border-radius: 5px;
+  transition: box-shadow 0.5s;
+  will-change: transform;
+}
+
+.card:hover {
+  /* box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.6); */
+}
