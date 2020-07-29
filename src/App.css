@@ -1,11 +1,17 @@
-.App {
-  text-align: center;
+.content-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  padding: 40px 0 0 20px
 }
 
-h2{
-  font-size: 28px;
-  text-align: start;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-bottom: 1px solid #eee;
+
+.context-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 200px;
 }

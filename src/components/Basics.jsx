@@ -1,30 +1,42 @@
-import React, { useState } from 'react'
-import { useSpring, animated } from 'react-spring'
+import React from 'react'
+
+import BasicsFadeIn from './BasicsFadeIn'
+import BasicsInnerText from './BasicsInnerText'
+import BasicsScrollTop from './BasicsScrollTop'
 
 function Basics() {
-  const [clickKeyframes, setClickKeyframes] = useState(false)
-  const props = useSpring({
-    opacity: 1,
-    from: {
-      opacity: 0,
-    },
-  })
-  const numberProps = useSpring({
-    number: 1,
-    from: {
-      number: 0,
-    },
-  })
-  const keyframes = useSpring({
-    x: clickKeyframes ? 1 : 0,
-  })
+  // const [clickKeyframes, setClickKeyframes] = useState(false)
+  // const props = useSpring({
+  //   opacity: 1,
+  //   from: {
+  //     opacity: 0,
+  //   },
+  // })
+  // const numberProps = useSpring({
+  //   number: 1,
+  //   from: {
+  //     number: 0,
+  //   },
+  // })
+  // const keyframes = useSpring({
+  //   x: clickKeyframes ? 1 : 0,
+  // })
   return (
     <>
       <h2>Basics</h2>
-      <animated.div style={props}>I will fade in</animated.div>
-      <br/>
+      <div className="panel">
+        <BasicsFadeIn />
+      </div>
+      <div className="panel">
+        <BasicsInnerText />
+      </div>
+      <div className="panel">
+        <BasicsScrollTop />
+      </div>
+      {/* <animated.div style={props}>I will fade in</animated.div>
+      <br />
       <animated.div>{numberProps.number.interpolate((n) => n.toFixed(2))}</animated.div>
-      <br/>
+      <br />
       <animated.div
         onClick={() => {
           setClickKeyframes((pre) => !pre)
@@ -39,7 +51,7 @@ function Basics() {
         }}
       >
         keyframes Click me!
-      </animated.div>
+      </animated.div> */}
     </>
   )
 }

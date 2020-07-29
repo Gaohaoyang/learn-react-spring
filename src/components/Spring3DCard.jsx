@@ -27,7 +27,6 @@ function Spring3DCard() {
     })
   })
 
-
   return (
     <div className="container">
       <animated.div
