@@ -26,6 +26,15 @@ function BasicsScrollTop() {
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ex ullam. Voluptatem ad quis maiores alias perspiciatis sunt adipisci hic cum quam labore, laudantium reprehenderit optio molestias exercitationem, sed eaque?
       </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum voluptates quia soluta suscipit porro dolore laborum tempora, repellendus sunt obcaecati quo a aspernatur reprehenderit doloremque repudiandae. Temporibus optio facere provident!
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam quia asperiores quaerat reiciendis magnam perferendis iste veniam atque! Labore assumenda possimus optio veniam maiores culpa distinctio quos accusantium, reiciendis eligendi?
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum nesciunt, deleniti impedit suscipit laudantium expedita temporibus sapiente harum, sunt cumque architecto est illum quisquam fugiat nostrum quibusdam assumenda ipsam. Rem.
+      </p>
     </animated.div>
   )
 }
