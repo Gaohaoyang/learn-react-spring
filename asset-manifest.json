@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/learn-react-spring/static/css/main.75fc552e.chunk.css",
-    "main.js": "/learn-react-spring/static/js/main.fa67e28c.chunk.js",
-    "main.js.map": "/learn-react-spring/static/js/main.fa67e28c.chunk.js.map",
+    "main.js": "/learn-react-spring/static/js/main.ccc1042a.chunk.js",
+    "main.js.map": "/learn-react-spring/static/js/main.ccc1042a.chunk.js.map",
     "runtime-main.js": "/learn-react-spring/static/js/runtime-main.aacd1f92.js",
     "runtime-main.js.map": "/learn-react-spring/static/js/runtime-main.aacd1f92.js.map",
-    "static/js/2.4778a0a8.chunk.js": "/learn-react-spring/static/js/2.4778a0a8.chunk.js",
-    "static/js/2.4778a0a8.chunk.js.map": "/learn-react-spring/static/js/2.4778a0a8.chunk.js.map",
+    "static/js/2.69a6ee27.chunk.js": "/learn-react-spring/static/js/2.69a6ee27.chunk.js",
+    "static/js/2.69a6ee27.chunk.js.map": "/learn-react-spring/static/js/2.69a6ee27.chunk.js.map",
     "index.html": "/learn-react-spring/index.html",
-    "precache-manifest.ecd373c8583d2a4b62b5f718da39e1aa.js": "/learn-react-spring/precache-manifest.ecd373c8583d2a4b62b5f718da39e1aa.js",
+    "precache-manifest.024d259c561495ee56b187ddc7c2daeb.js": "/learn-react-spring/precache-manifest.024d259c561495ee56b187ddc7c2daeb.js",
     "service-worker.js": "/learn-react-spring/service-worker.js",
     "static/css/main.75fc552e.chunk.css.map": "/learn-react-spring/static/css/main.75fc552e.chunk.css.map",
-    "static/js/2.4778a0a8.chunk.js.LICENSE.txt": "/learn-react-spring/static/js/2.4778a0a8.chunk.js.LICENSE.txt"
+    "static/js/2.69a6ee27.chunk.js.LICENSE.txt": "/learn-react-spring/static/js/2.69a6ee27.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.aacd1f92.js",
-    "static/js/2.4778a0a8.chunk.js",
+    "static/js/2.69a6ee27.chunk.js",
     "static/css/main.75fc552e.chunk.css",
-    "static/js/main.fa67e28c.chunk.js"
+    "static/js/main.ccc1042a.chunk.js"
   ]
 }
