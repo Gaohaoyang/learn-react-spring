@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/learn-react-spring/static/css/main.75fc552e.chunk.css",
-    "main.js": "/learn-react-spring/static/js/main.225d7c08.chunk.js",
-    "main.js.map": "/learn-react-spring/static/js/main.225d7c08.chunk.js.map",
+    "main.js": "/learn-react-spring/static/js/main.fa67e28c.chunk.js",
+    "main.js.map": "/learn-react-spring/static/js/main.fa67e28c.chunk.js.map",
     "runtime-main.js": "/learn-react-spring/static/js/runtime-main.aacd1f92.js",
     "runtime-main.js.map": "/learn-react-spring/static/js/runtime-main.aacd1f92.js.map",
     "static/js/2.4778a0a8.chunk.js": "/learn-react-spring/static/js/2.4778a0a8.chunk.js",
     "static/js/2.4778a0a8.chunk.js.map": "/learn-react-spring/static/js/2.4778a0a8.chunk.js.map",
     "index.html": "/learn-react-spring/index.html",
-    "precache-manifest.26fc28e5277b703abbfcfc3e1f42ae2f.js": "/learn-react-spring/precache-manifest.26fc28e5277b703abbfcfc3e1f42ae2f.js",
+    "precache-manifest.ecd373c8583d2a4b62b5f718da39e1aa.js": "/learn-react-spring/precache-manifest.ecd373c8583d2a4b62b5f718da39e1aa.js",
     "service-worker.js": "/learn-react-spring/service-worker.js",
     "static/css/main.75fc552e.chunk.css.map": "/learn-react-spring/static/css/main.75fc552e.chunk.css.map",
     "static/js/2.4778a0a8.chunk.js.LICENSE.txt": "/learn-react-spring/static/js/2.4778a0a8.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.aacd1f92.js",
     "static/js/2.4778a0a8.chunk.js",
     "static/css/main.75fc552e.chunk.css",
-    "static/js/main.225d7c08.chunk.js"
+    "static/js/main.fa67e28c.chunk.js"
   ]
 }
