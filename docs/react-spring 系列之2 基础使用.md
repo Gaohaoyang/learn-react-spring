@@ -42,7 +42,7 @@ function BasicsFadeIn() {
 export default BasicsFadeIn
 ```
 
-效果如下
+[效果展示](https://gaohaoyang.github.io/learn-react-spring/Basics)
 
 ![](https://gw.alicdn.com/tfs/TB1T.GXPpP7gK0jSZFjXXc5aXXa-305-151.gif)
 
@@ -130,9 +130,11 @@ function BasicsScrollTop() {
 export default BasicsScrollTop
 ```
 
-效果展示
+[效果展示](https://gaohaoyang.github.io/learn-react-spring/Basics)
 
 ![](https://gw.alicdn.com/tfs/TB1_UjfbtTfau8jSZFwXXX1mVXa-292-151.gif)
+
+
 
 数字变化示例
 
@@ -157,6 +159,6 @@ function BasicsInnerText() {
 export default BasicsInnerText
 ```
 
-效果展示
+[效果展示](https://gaohaoyang.github.io/learn-react-spring/Basics)
 
 ![](https://gw.alicdn.com/tfs/TB1NwsmbSslXu8jSZFuXXXg7FXa-285-73.gif)
