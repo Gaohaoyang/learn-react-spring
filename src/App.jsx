@@ -15,7 +15,7 @@ import Intro from './components/Intro'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/learn-react-spring">
       <div className="content-wrap">
         <ul>
           <li>
