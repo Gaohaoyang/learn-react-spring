@@ -3,6 +3,7 @@ import React from 'react'
 import BasicsFadeIn from './BasicsFadeIn'
 import BasicsInnerText from './BasicsInnerText'
 import BasicsScrollTop from './BasicsScrollTop'
+import BasicsInterpolate from './BasicsInterpolate'
 
 function Basics() {
   // const [clickKeyframes, setClickKeyframes] = useState(false)
@@ -32,6 +33,10 @@ function Basics() {
       </div>
       <div className="panel">
         <BasicsScrollTop />
+      </div>
+      <h2>interpolate</h2>
+      <div className="panel">
+        <BasicsInterpolate />
       </div>
       {/* <animated.div style={props}>I will fade in</animated.div>
       <br />

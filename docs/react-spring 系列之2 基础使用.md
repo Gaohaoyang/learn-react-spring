@@ -188,3 +188,73 @@ const props = useSpring({
   textShadow: '0px 5px 15px rgba(255,255,255,0.5)'
 })
 ```
+
+## 视图层的插值修改
+
+如果要在视图层中再次修改 animated value，可以使用 `interpolate` 这个方法。interpolate 可以传入一个函数或一个表示区间的对象。也可以形成链，一个计算结果被另一个计算重复使用。
+
+这个插值修改的设计没有放在 spring 中而是放在视图层的原因是，可以提高性能，更快并占用更少空间。
+
+示例
+
+```jsx
+import React from 'react'
+import { useSpring, animated, interpolate } from 'react-spring'
+
+function BasicsInterpolate() {
+  const {
+    color,
+    o,
+    xyz,
+  } = useSpring({
+    from: {
+      color: '#ef5350',
+      o: 0,
+      xyz: [0, 0, 0],
+    },
+    color: '#283593',
+    o: 1,
+    xyz: [10, 6, 5],
+  })
+
+  return (
+    <animated.div
+      style={{
+        // 不使用 interpolate 直接使用属性
+        color,
+        // 设置背景透明度
+        background: o.interpolate((value) => `rgba(253, 216, 53, ${value})`),
+        // 数组的方式使用
+        transform: xyz.interpolate((x, y, z) => `translate3d(${x}px, ${y}px, ${z}px)`),
+        // 合并多组值
+        border: interpolate([o, color], (oo, c) => `${oo * 5}px solid ${c}`),
+        // 生成一个范围值，再使用 interpolate
+        padding: o.interpolate({
+          range: [0, 0.8, 1],
+          output: [0, 0, 10],
+        }).interpolate((oo) => `${oo}%`),
+        // 可以使用字符串在 range 中
+        borderColor: o.interpolate({
+          range: [0, 1],
+          output: ['red', '#ffaabb'],
+        }),
+        // 简写方式
+        opacity: o.interpolate(
+          [0.1, 0.2, 0.6, 1],
+          [1, 0.1, 0.5, 1],
+        ),
+      }}
+    >
+      {
+        o.interpolate((n) => n.toFixed(2))
+      }
+    </animated.div>
+  )
+}
+
+export default BasicsInterpolate
+```
+
+[效果展示](https://gaohaoyang.github.io/learn-react-spring/#/Basics)
+
+![](https://gw.alicdn.com/tfs/TB1SKTePNz1gK0jSZSgXXavwpXa-383-143.gif)
