@@ -134,8 +134,6 @@ export default BasicsScrollTop
 
 ![](https://gw.alicdn.com/tfs/TB1_UjfbtTfau8jSZFwXXX1mVXa-292-151.gif)
 
-
-
 数字变化示例
 
 ``` jsx
@@ -162,3 +160,31 @@ export default BasicsInnerText
 [效果展示](https://gaohaoyang.github.io/learn-react-spring/#/Basics)
 
 ![](https://gw.alicdn.com/tfs/TB1NwsmbSslXu8jSZFuXXXg7FXa-285-73.gif)
+
+Springs 可以操作的所有状态插值枚举如下：
+
+- Colors (names, rgb, rgba, hsl, hsla, gradients)
+- Absolute lengths (cm, mm, in, px, pt, pc)
+- Relative lengths (em, ex, ch, rem, vw, vh, vmin, vmax, %)
+- Angles (deg, rad, grad, turn)
+- Flex and grid units (fr, etc)
+- All HTML attributes
+- SVG paths (as long as the number of points matches, otherwise - use custom interpolation)
+- Arrays
+- String patterns (transform, border, boxShadow, etc)
+- Non-animatable string values (visibility, pointerEvents, etc)
+- ScrollTop/scrollLeft
+
+``` jsx
+const props = useSpring({
+  vector: [0, 10, 30],
+  display: 'block',
+  padding: 20,
+  background: 'linear-gradient(to right, #009fff, #ec2f4b)',
+  transform: 'translate3d(0px,0,0) scale(1) rotateX(0deg)',
+  boxShadow: '0px 10px 20px 0px rgba(0,0,0,0.4)',
+  borderBottom: '10px solid #2D3747',
+  shape: 'M20,20 L20,380 L380,380 L380,20 L20,20 Z',
+  textShadow: '0px 5px 15px rgba(255,255,255,0.5)'
+})
+```
