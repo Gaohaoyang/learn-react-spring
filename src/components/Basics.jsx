@@ -5,6 +5,7 @@ import BasicsInnerText from './BasicsInnerText'
 import BasicsScrollTop from './BasicsScrollTop'
 import BasicsInterpolate from './BasicsInterpolate'
 import BasicsMeasure from './BasicsMeasure'
+import BasicsKeyframes from './BasicsKeyframes'
 
 function Basics() {
   // const [clickKeyframes, setClickKeyframes] = useState(false)
@@ -42,6 +43,10 @@ function Basics() {
       <h2>useResizeAware</h2>
       <div className="panel">
         <BasicsMeasure />
+      </div>
+      <h2>Emulating keyframes</h2>
+      <div className="panel">
+        <BasicsKeyframes />
       </div>
       {/* <animated.div style={props}>I will fade in</animated.div>
       <br />

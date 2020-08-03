@@ -267,7 +267,7 @@ export default BasicsInterpolate
 
 例如我们监听一个 div 的宽度，当其宽度下雨 249 px 时，将这个 div 透明度设置为 0。
 
-``` tsx
+``` jsx
 import React, { Fragment } from 'react'
 import useMeasure from 'react-use-measure'
 import { animated, useSpring } from 'react-spring'
@@ -315,3 +315,50 @@ export default BasicsMeasure
 [效果展示](https://gaohaoyang.github.io/learn-react-spring/#/Basics)
 
 ![](https://gw.alicdn.com/tfs/TB1gstndipE_u4jSZKbXXbCUVXa-365-254.gif)
+
+### 模拟 keyframes
+
+``` jsx
+import React, { useState } from 'react'
+import { animated, useSpring } from 'react-spring'
+
+function BasicsKeyframes() {
+  const [state, setState] = useState(true)
+  const { x } = useSpring({
+    x: state ? 1 : 0,
+    from: {
+      x: 0,
+    },
+    config: {
+      duration: 1000,
+    },
+  })
+  return (
+    <div
+      style={{
+        display: 'flex',
+      }}
+    >
+      <animated.div
+        onClick={() => {
+          setState(!state)
+        }}
+        style={{
+          transform: x.interpolate({
+            range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+            output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1],
+          }).interpolate((scale) => `scale(${scale})`),
+        }}
+      >
+        kkkkeyframes click me!
+      </animated.div>
+    </div>
+  )
+}
+
+export default BasicsKeyframes
+```
+
+[效果展示](https://gaohaoyang.github.io/learn-react-spring/#/Basics)
+
+![](https://gw.alicdn.com/tfs/TB1H.3CPYr1gK0jSZFDXXb9yVXa-374-100.gif)
