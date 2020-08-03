@@ -10,7 +10,7 @@ import './base.css'
 import './App.css'
 
 import Basics from './components/Basics'
-import Spring from './components/Spring'
+import UseSpring from './components/useSpring'
 import Intro from './components/Intro'
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
             <Basics />
           </Route>
           <Route path="/useSpring">
-            <Spring />
+            <UseSpring />
           </Route>
         </Switch>
       </div>
