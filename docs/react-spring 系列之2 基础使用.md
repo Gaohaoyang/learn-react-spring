@@ -15,8 +15,8 @@
 
 目前 react-spring 提供了 5 个 hooks api：
 
-- `useSpring` 是一个单弹簧系统，将数据从 a 点移动到 b 点
-- `useSprings` 是一个多弹窗系统，针对列表，将里面的数据一个个从 a 移动到 b
+- `useSpring` 是一个单弹簧系统，从 a 点移动到 b 点
+- `useSprings` 是一个多弹窗系统，针对列表，一个个从 a 移动到 b
 - `useTrail` 单个数据集的多个弹簧系统，每个弹簧系统跟随在另一个弹簧系统后面
 - `useTransition` 用于安装和写在 transitions 过渡动画（）
 - `useChain` 将多个动画按队列或链组合在一起
@@ -258,3 +258,60 @@ export default BasicsInterpolate
 [效果展示](https://gaohaoyang.github.io/learn-react-spring/#/Basics)
 
 ![](https://gw.alicdn.com/tfs/TB1SKTePNz1gK0jSZSgXXavwpXa-383-143.gif)
+
+## 补充
+
+### “自动”触发动画
+
+使用 hooks 会和 renderprops 不同的是，hooks 不知道作用于具体的视图。因此想要通过 hooks api “自动”触发动画是无法完成的。听起来是一种退步，但使用 hooks 监听尺寸变化是很容易的，例如 [react-use-measure](https://github.com/react-spring/react-use-measure), [react-resize-aware](https://github.com/FezVrasta/react-resize-aware), [react-measure](https://github.com/souporserious/react-measure)
+
+例如我们监听一个 div 的宽度，当其宽度下雨 249 px 时，将这个 div 透明度设置为 0。
+
+``` tsx
+import React, { Fragment } from 'react'
+import useMeasure from 'react-use-measure'
+import { animated, useSpring } from 'react-spring'
+
+function BasicsMeasure() {
+  const [ref, bounds] = useMeasure()
+  const { opacity } = useSpring({
+    from: {
+      opacity: 1,
+    },
+    opacity: bounds.width < 249 ? 0 : 1,
+  })
+  return (
+    <animated.div
+      ref={ref}
+      style={{
+        position: 'relative',
+        opacity,
+      }}
+    >
+      {Object.keys(bounds).map((key) => (
+        <Fragment key={key}>
+          <span>
+            {
+              key
+            }
+            ---
+          </span>
+          <span>
+            {
+              Math.round(bounds[key])
+            }
+            px
+          </span>
+          <br />
+        </Fragment>
+      ))}
+    </animated.div>
+  )
+}
+
+export default BasicsMeasure
+```
+
+[效果展示](https://gaohaoyang.github.io/learn-react-spring/#/Basics)
+
+![](https://gw.alicdn.com/tfs/TB1gstndipE_u4jSZKbXXbCUVXa-365-254.gif)
