@@ -18,7 +18,7 @@ import UseSpring from './components/useSpring'
 import Intro from './components/Intro'
 
 function App() {
-  const [showContent, setShowContent] = useState(true)
+  const [showContent, setShowContent] = useState(false)
   const { transform, boxShadow } = useSpring({
     to: {
       transform: `translateX(${showContent ? 200 : 0}px)`,
