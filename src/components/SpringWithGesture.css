@@ -1,0 +1,13 @@
+.springWithGesture{
+  width: 80px;
+  height: 80px;
+  background-color: #455A64;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.springWithGesture:hover{
+  cursor: grab;
+}

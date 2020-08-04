@@ -5,6 +5,8 @@ import SpringPassAFun from './SpringPassAFun'
 import SpringAsyncScripts from './SpringAsyncScripts'
 import SpringAsyncChain from './SpringAsyncChain'
 import SpringFlipCard from './SpringFlipCard'
+import SpringWithGesture from './SpringWithGesture'
+// import Spring3DCard from './Spring3DCard'
 
 function UseSpring() {
   return (
@@ -28,6 +30,14 @@ function UseSpring() {
       <div className="panel">
         <SpringFlipCard />
       </div>
+      <h2>SpringWithGesture</h2>
+      <div className="panel">
+        <SpringWithGesture />
+      </div>
+      {/* <h2>Touch 3D Card</h2>
+      <div className="panel">
+        <Spring3DCard />
+      </div> */}
     </>
   )
 }
