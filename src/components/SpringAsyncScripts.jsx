@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 
-function SpringAshyncScripts() {
+function SpringAsyncScripts() {
   const props = useSpring({
     to: async (next) => {
       await next({ opacity: 1, color: '#ffaaee' })
@@ -15,4 +15,4 @@ function SpringAshyncScripts() {
   )
 }
 
-export default SpringAshyncScripts
+export default SpringAsyncScripts

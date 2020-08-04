@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 
-function SpringAshyncChain() {
+function SpringAsyncChain() {
   const props = useSpring({
     from: { opacity: 0, color: 'red' },
     to: [
@@ -14,4 +14,4 @@ function SpringAshyncChain() {
   )
 }
 
-export default SpringAshyncChain
+export default SpringAsyncChain

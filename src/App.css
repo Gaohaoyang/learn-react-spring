@@ -1,5 +1,5 @@
 .content-wrap {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -7,6 +7,9 @@
   padding: 40px 0 0 20px
 }
 
+.content-show {
+  display: none;
+}
 
 .context-wrap {
   position: absolute;
@@ -14,4 +17,41 @@
   bottom: 0;
   right: 0;
   left: 200px;
+}
+
+@media (max-width: 767px) {
+  .content-wrap {
+    left: -200px;
+    transform: translateX(200px);
+    background-color: #f2f2f2;
+    z-index: 10;
+    box-sizing: border-box;
+    padding-top: 80px;
+  }
+
+  .content-show {
+    width: 44px;
+    height: 44px;
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    background-color: #f2f2f2;
+    display: block;
+    z-index: 11;
+    background-image: url(https://gw.alicdn.com/tfs/TB1r9mShP39YK4jSZPcXXXrUFXa-48-48.png);
+    background-position: center;
+    background-size: 32px;
+    background-repeat: no-repeat;
+  }
+
+  .context-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 36px;
+  }
 }

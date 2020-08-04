@@ -2,8 +2,8 @@ import React from 'react'
 
 import SpringOverwrite from './SpringOverwrite'
 import SpringPassAFun from './SpringPassAFun'
-import SpringAshyncScripts from './SpringAshyncScripts'
-import SpringAshyncChain from './SpringAshyncChain'
+import SpringAsyncScripts from './SpringAsyncScripts'
+import SpringAsyncChain from './SpringAsyncChain'
 import SpringFlipCard from './SpringFlipCard'
 
 function UseSpring() {
@@ -16,13 +16,13 @@ function UseSpring() {
       <div className="panel">
         <SpringPassAFun />
       </div>
-      <h2>SpringAshyncScripts</h2>
+      <h2>SpringAsyncScripts</h2>
       <div className="panel">
-        <SpringAshyncScripts />
+        <SpringAsyncScripts />
       </div>
-      <h2>SpringAshyncChain</h2>
+      <h2>SpringAsyncChain</h2>
       <div className="panel">
-        <SpringAshyncChain />
+        <SpringAsyncChain />
       </div>
       <h2>Flip Card</h2>
       <div className="panel">
