@@ -4,6 +4,7 @@ import SpringOverwrite from './SpringOverwrite'
 import SpringPassAFun from './SpringPassAFun'
 import SpringAshyncScripts from './SpringAshyncScripts'
 import SpringAshyncChain from './SpringAshyncChain'
+import SpringFlipCard from './SpringFlipCard'
 
 function UseSpring() {
   return (
@@ -15,11 +16,17 @@ function UseSpring() {
       <div className="panel">
         <SpringPassAFun />
       </div>
+      <h2>SpringAshyncScripts</h2>
       <div className="panel">
         <SpringAshyncScripts />
       </div>
+      <h2>SpringAshyncChain</h2>
       <div className="panel">
         <SpringAshyncChain />
+      </div>
+      <h2>Flip Card</h2>
+      <div className="panel">
+        <SpringFlipCard />
       </div>
     </>
   )

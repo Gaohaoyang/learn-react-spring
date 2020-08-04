@@ -1,0 +1,23 @@
+.wrap{
+  position: 'relative';
+  width: 170px;
+  height: 240px;
+}
+.card {
+  width: 170px;
+  height: 240px;
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+}
+
+.front {
+  background-image: url(https://gw.alicdn.com/tfs/TB1v1EygQ9l0K4jSZFKXXXFjpXa-564-792.png);
+}
+
+.back {
+  background-image: url(https://gw.alicdn.com/tfs/TB1KAShQhv1gK0jSZFFXXb0sXXa-341-480.png);
+}
