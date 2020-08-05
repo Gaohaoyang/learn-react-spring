@@ -275,3 +275,83 @@ config: { mass: 1, tension: 180, friction: 16 },
 ```
 
 最终呈现出上述翻转效果。
+
+### Drag
+
+```jsx
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react'
+import { useGesture } from 'react-use-gesture'
+import { useSpring, animated, interpolate } from 'react-spring'
+
+import './SpringWithGesture.css'
+
+const lockScroll = (e) => {
+  e.preventDefault()
+}
+
+function SpringWithGesture() {
+  const [{ x, y }, set] = useSpring(() => ({ x: 0, y: 0 }))
+
+  // Set the drag hook and define component movement based on gesture data
+  const bind = useGesture({
+    onDrag: ({
+      down,
+      movement: [mx, my],
+    }) => {
+      set({
+        x: down
+          ? mx
+          : 0,
+        y: down
+          ? my
+          : 0,
+      })
+    },
+    onDragStart: () => {
+      document.body.addEventListener('touchmove', lockScroll, { passive: false })
+    },
+    onDragEnd: () => {
+      document.body.removeEventListener('touchmove', lockScroll, { passive: false })
+    },
+  })
+
+  return (
+    <animated.div
+      className="springWithGesture"
+      {...bind()}
+      style={{
+        transform: interpolate([x, y], (xx, yy) => `translateX(${xx}px) translateY(${yy}px)`),
+      }}
+    >
+      drag me
+    </animated.div>
+  )
+}
+
+export default SpringWithGesture
+```
+
+SpringWithGesture.css
+
+``` css
+.springWithGesture{
+  width: 80px;
+  height: 80px;
+  background-color: #455A64;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.springWithGesture:hover{
+  cursor: grab;
+}
+```
+
+[效果展示](https://gaohaoyang.github.io/learn-react-spring/#/useSpring)
+
+![](https://gw.alicdn.com/tfs/TB1_afMQhv1gK0jSZFFXXb0sXXa-305-287.gif)
+
+这里结合了 [react-use-gesture](https://github.com/react-spring/react-use-gesture) 这个优质的手势库一起，react-use-gesture 也是在 react-spring 这个 organization 下，他们之间的配合使用应该是非常完美的。
