@@ -15,6 +15,8 @@ import './App.css'
 
 import Basics from './components/Basics'
 import UseSpring from './components/useSpring'
+import UseChain from './components/useChain'
+import UseTrail from './components/useTrail'
 import Intro from './components/Intro'
 
 function App() {
@@ -49,6 +51,12 @@ function App() {
           <li>
             <Link to="/useSpring">useSpring</Link>
           </li>
+          <li>
+            <Link to="/useTrail">useTrail</Link>
+          </li>
+          {/* <li>
+            <Link to="/useChain">useChain</Link>
+          </li> */}
         </ul>
       </animated.div>
       <div
@@ -74,6 +82,12 @@ function App() {
           </Route>
           <Route path="/useSpring">
             <UseSpring />
+          </Route>
+          <Route path="/useTrail">
+            <UseTrail />
+          </Route>
+          <Route path="/useChain">
+            <UseChain />
           </Route>
         </Switch>
       </div>

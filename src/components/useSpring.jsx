@@ -34,7 +34,7 @@ function UseSpring() {
       <div className="panel">
         <SpringWithGesture />
       </div>
-      {/* <h2>Touch 3D Card</h2>
+      {/* <h2>3D Card</h2>
       <div className="panel">
         <Spring3DCard />
       </div> */}
