@@ -356,5 +356,4 @@ SpringWithGesture.css
 
 这里结合了 [react-use-gesture](https://github.com/react-spring/react-use-gesture) 这个优质的手势库一起，react-use-gesture 也是归属于 react-spring 开源组织的，他们之间的配合使用应该是非常完美的。
 
-### 3D Card
 
