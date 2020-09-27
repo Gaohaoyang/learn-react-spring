@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ChainProfilePics from './ChainProfilePics'
+import ChainProfilePics from '../ChainProfilePics'
 
 function useChain() {
   return (

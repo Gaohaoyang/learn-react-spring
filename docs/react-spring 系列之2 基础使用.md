@@ -265,7 +265,7 @@ export default BasicsInterpolate
 
 使用 hooks 会和 renderprops 不同的是，hooks 不知道作用于具体的视图。因此想要通过 hooks api “自动”触发动画是无法完成的。听起来是一种退步，但使用 hooks 监听尺寸变化是很容易的，例如 [react-use-measure](https://github.com/react-spring/react-use-measure), [react-resize-aware](https://github.com/FezVrasta/react-resize-aware), [react-measure](https://github.com/souporserious/react-measure)
 
-例如我们监听一个 div 的宽度，当其宽度下雨 249 px 时，将这个 div 透明度设置为 0。
+例如我们监听一个 div 的宽度，当其宽度小于 249 px 时，将这个 div 透明度设置为 0。
 
 ``` jsx
 import React, { Fragment } from 'react'

@@ -17,7 +17,7 @@
 import { useSpring, animated } from 'react-spring'
 ```
 
-将一个值（value）转变为动画值（animated-value）。
+将一个普通值（value）转变为动画值（animated-value）。
 
 可以通过 props 的改变而 re-render，来触发动画，例如
 
@@ -354,6 +354,7 @@ SpringWithGesture.css
 
 ![](https://gw.alicdn.com/tfs/TB1_afMQhv1gK0jSZFFXXb0sXXa-305-287.gif)
 
-这里结合了 [react-use-gesture](https://github.com/react-spring/react-use-gesture) 这个优质的手势库一起，react-use-gesture 也是归属于 react-spring 开源组织的，他们之间的配合使用应该是非常完美的。
+这里结合了 [react-use-gesture](https://github.com/react-spring/react-use-gesture) 这个优质的手势库一起，react-use-gesture 也是归属于 react-spring 开源组织的，他们之间的配合使用应该可以说是非常完美的。
 
+### Gift and Bubble
 

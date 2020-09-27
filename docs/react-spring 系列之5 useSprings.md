@@ -14,9 +14,19 @@
 ## 使用
 
 ```jsx
-import {useSprings, animated} from 'react-spring'
+import { useSprings, animated } from 'react-spring'
 ```
 
-`useSprings` 用于创建多个 spring 动画，每个一个 spring 动画，例如一个列表之类的动画。
+`useSprings` 用于创建多个 spring 动画，每一个 spring 动画都拥有自己的配置信息，例如一个列表类型的动画。
 
 和 `useSpring` 类似 `useSprings` 也有两种调用方式。
+
+### 覆盖值来改变状态触发动画
+
+如果改变组件传入的props触发rerender，那么动画也会被更新触发。
+
+```js
+const springs = useSprings(number, items.map(item => ({ opacity: item.opacity }))
+```
+
+###

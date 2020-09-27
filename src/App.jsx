@@ -13,11 +13,12 @@ import { useSpring, animated } from 'react-spring'
 import './base.css'
 import './App.css'
 
-import Basics from './components/Basics'
-import UseSpring from './components/useSpring'
-import UseChain from './components/useChain'
-import UseTrail from './components/useTrail'
-import Intro from './components/Intro'
+import Intro from './components/intro/Intro'
+import Basics from './components/basics/Basics'
+import UseSpring from './components/useSpring/useSpring'
+import UseSprings from './components/useSprings/useSprings'
+import UseChain from './components/useChain/useChain'
+import UseTrail from './components/useTrail/useTrail'
 
 function App() {
   const [showContent, setShowContent] = useState(false)
@@ -52,6 +53,9 @@ function App() {
             <Link to="/useSpring">useSpring</Link>
           </li>
           <li>
+            <Link to="/useSprings">useSprings</Link>
+          </li>
+          <li>
             <Link to="/useTrail">useTrail</Link>
           </li>
           {/* <li>
@@ -82,6 +86,9 @@ function App() {
           </Route>
           <Route path="/useSpring">
             <UseSpring />
+          </Route>
+          <Route path="/useSprings">
+            <UseSprings />
           </Route>
           <Route path="/useTrail">
             <UseTrail />
